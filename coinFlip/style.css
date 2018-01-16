@@ -1,6 +1,9 @@
 body {
   text-align:center;
 }
+div {
+  word-break:break-all;
+}
 div.container {
   border-radius:10px;
   background-color:rgba(0, 126, 108, 0.9);
@@ -10,5 +13,4 @@ div.container {
 }
 #howmany {
   padding:5px;
-
 }

@@ -26,11 +26,11 @@ function countHeads() {
   /* Using regular expression here to replace all T (tails) with nothing,
   this basically removing all instances of T. This is done with global flag */
   heads = heads.replace(/T/g, "");
-  console.log(heads);
+  document.getElementById("headscount").innerHTML = "Heads count: " + heads.length;
 }
 // This has the same functionality as countHead, but for Tails instead (filter out H)
 function countTails() {
   var tails = document.getElementById("results").textContent;
   tails = tails.replace(/H/g, "");
-  console.log(tails);
+  document.getElementById("tailscount").innerHTML = "Tails count: " + tails.length;
 }
