@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<!-- The plan is to create a coin, that will function as a button. When pressed,
+it will spin the amount of times it has to be flipped, to give an impression of
+an actual coin being flipped :)  -->
+<html>
+  <head>
+    <link type="text/css" rel="stylesheet" href="style.css"/>
+  </head>
+  <body>
+    <div id="title" class="container"><p>Flip the coin, see the results.</p></div>
+    <form>
+      <div class="container">
+        <input type="text" id="howmany" placeholder="How many flips?"></input><br>
+        <!-- The order of the onclick property is important; if the clearBox()
+        function is the second one, it will execute second, regardless of where
+        it actually is in the javascript code -->
+        <button type="button" id="flip" onclick="clearBox(); coinFlip(); countHeads(); countTails();">Flip the Coin!</button>
+      </div>
+    </form>
+    <div id="results" class="container">
+    </div>
+    <div id="count" class="container">
+      <div id="headscount">
+      </div>
+      <div id="tailscount">
+      </div>
+    </div>
+  </body>
+  <script src="main.js"></script>
+</html>
