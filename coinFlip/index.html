@@ -14,7 +14,9 @@ an actual coin being flipped :)  -->
         <!-- The order of the onclick property is important; if the clearBox()
         function is the second one, it will execute second, regardless of where
         it actually is in the javascript code -->
-        <button type="button" id="flip" onclick="clearBox(); coinFlip(); countHeads(); countTails();">Flip the Coin!</button>
+        <!--<button type="button" id="flip" onclick="clearBox(); coinFlip(); countHeads(); countTails();">-->
+          <div type="button" id="thecoin" onclick="clearBox(); coinFlip(); countHeads(); countTails();"></div>
+        <!--</button>-->
       </div>
     </form>
     <div id="results" class="container">
