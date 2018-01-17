@@ -14,3 +14,16 @@ div.container {
 #howmany {
   padding:5px;
 }
+#thecoin {
+  height:300px;
+  width:300px;
+  border:10px;
+  border-style:double;
+  border-radius:160px;
+  padding:0px;
+  margin:10px;
+  cursor:pointer;
+}
+#thecoin:active {
+  transform:rotateY(360deg);
+}
