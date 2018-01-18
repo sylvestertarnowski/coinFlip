@@ -34,3 +34,10 @@ function countTails() {
   tails = tails.replace(/H/g, "");
   document.getElementById("tailscount").innerHTML = "Tails count: " + tails.length;
 }
+// jQuerry addition, need to change that to vanilla JavaScript
+$("#thecoin").on('click', function() {
+  $("div#thecoin").removeClass("theflip");
+  setTimeout(1);
+  $("div#thecoin").addClass("theflip");
+});
+
