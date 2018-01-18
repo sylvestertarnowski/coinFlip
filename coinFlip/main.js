@@ -21,7 +21,7 @@ function coinFlip() { //called by pressing a button id "flip"
 /* This function will filter out T from the string of T and H created by
 a coinFlip(). Then it will count the amount of T (check the length of a string
 that resulted from removing the opposite coin flip value). */
-function countHeads() {
+function countHeads(heads) {
   var heads = document.getElementById("results").textContent;
   /* Using regular expression here to replace all T (tails) with nothing,
   this basically removing all instances of T. This is done with global flag */
@@ -29,15 +29,19 @@ function countHeads() {
   document.getElementById("headscount").innerHTML = "Heads count: " + heads.length;
 }
 // This has the same functionality as countHead, but for Tails instead (filter out H)
-function countTails() {
+function countTails(tails) {
   var tails = document.getElementById("results").textContent;
   tails = tails.replace(/H/g, "");
   document.getElementById("tailscount").innerHTML = "Tails count: " + tails.length;
 }
-// jQuerry addition, need to change that to vanilla JavaScript
+/* This jQuerry function on first iteration adds a class .theflip to the 
+div with id #thecoin. That class has css animation tied to it, so when 
+user clicks on #thecoin button, animation executes. To ensure animation
+plays every time user clicks on the coin, it first removes the said class,
+and then waits 30 miliseconds before adding the class to prevent animation
+from not playing. */
 $("#thecoin").on('click', function() {
   $("div#thecoin").removeClass("theflip");
-  setTimeout(1);
-  $("div#thecoin").addClass("theflip");
+  setTimeout(function() {$("div#thecoin").addClass("theflip")}, 30);
 });
 
